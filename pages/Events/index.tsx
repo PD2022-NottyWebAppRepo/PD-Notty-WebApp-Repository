@@ -1,37 +1,45 @@
+import NAVBAR from '../Component/Navbar';
+import Link from "next/link"
+import { Col, Card,Row } from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {client} from '../../libs/client'
-import  { Navbar,Nav,Row,Col,Card } from 'react-bootstrap';
-import Link from "next/link"
 
-const App = ({eventinfo}) => {
+type eventinfo = {
+  id:string,
+  createdAt: string,
+  updatedAt: string,
+  publishedAt: string,
+  revisedAt: string,
+  EventName: string,
+  EventPlace: string,
+  EventOverview?: string,
+  EventStartDate: string,
+  EventEndDate: string,
+}
+
+const App = () => {
+  //Eventがeventinfo型オブジェクトを複数持ったオブジェクト
+  console.log(Event)
   return (
     <div>
-      <Navbar bg="warning" expand="md" color='yellow-400'>
-        <Navbar.Toggle className='me-auto'/>
-        <Navbar.Brand href="#home" className='me-auto'><b>イベント一覧</b></Navbar.Brand>
-          <Navbar.Collapse>
-            <Nav className="me-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-      </Navbar>
+      <NAVBAR/>
       <Row xs={2} md={2} className="g-2">
-        {eventinfo.map((eventinfo: { EventName: string; }) => (
-        <Col>
-          <Card>
-            <Card.Img variant="top" src="../public/eventphoto.png" />
-            <Card.Body >
-            <Card.Title>{eventinfo.EventName}</Card.Title>
-            <Link href={`/Events/${eventinfo.id}`}>
-              <Card.Text>
-                Event 
-              </Card.Text>
-            </Link>
-            </Card.Body>
-          </Card>
-        </Col>
+        {/*{Object.keys(Event).map((_,idx:number) => (
+            <Col>
+              <Card>
+                <Card.Img variant="top" src="../public/eventphoto.png" />
+                <Card.Body >
+                <Card.Title>{Events[idx].EventName}</Card.Title>
+                <Link href={`/Events/${Event[idx].EventName}`}>
+                  <Card.Text>
+                    Event 
+                  </Card.Text>
+                </Link>
+                </Card.Body>
+              </Card>
+            </Col>
         ))}
+      */}
       </Row>
     </div>
   )
@@ -48,3 +56,6 @@ export const getStaticProps = async () => {
 };
 
 export default App
+
+
+
