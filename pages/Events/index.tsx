@@ -23,7 +23,7 @@ const App = ({eventinfo}) => {
             <Card.Img variant="top" src="../public/eventphoto.png" />
             <Card.Body >
             <Card.Title>{eventinfo.EventName}</Card.Title>
-            <Link href={`/Events/${eventinfo.contentid}`}>
+            <Link href={`/Events/${eventinfo.id}`}>
               <Card.Text>
                 Event 
               </Card.Text>

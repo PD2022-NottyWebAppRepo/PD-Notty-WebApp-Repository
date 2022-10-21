@@ -1,0 +1,35 @@
+{
+    "apiFields":[
+        {
+            "idValue":"MrpYYB1biK",
+            "fieldId":"EventName",
+            "name":"イベント名",
+            "kind":"text",
+            "required":true,
+            "isUnique":false
+        },
+        {
+            "fieldId":"EventPlace",
+            "name":"イベント場所",
+            "kind":"text",
+            "required":true,
+            "isUnique":false
+        },
+        {
+            "fieldId":"EventOverview",
+            "name":"イベント概要",
+            "kind":"richEditor"
+        },
+        {
+            "fieldId":"EventStartDate",
+            "name":"開催日",
+            "kind":"date"
+        },
+        {
+            "fieldId":"EventEndDate",
+            "name":"終了日",
+            "kind":"date"
+        }
+    ],
+    "customFields":[]
+}
