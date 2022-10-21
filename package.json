@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.1",
+    "dotenv": "^16.0.3",
     "microcms-js-sdk": "^2.2.1",
+    "microcms-lib": "^1.0.4",
     "next": "12.3.1",
     "next-auth": "^4.12.2",
     "react": "18.2.0",
