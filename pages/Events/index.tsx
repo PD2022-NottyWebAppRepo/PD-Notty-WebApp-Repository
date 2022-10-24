@@ -17,7 +17,7 @@ type eventinfo = {
   EventEndDate: string,
 }
 
-const App = () => {
+const App = (eventinfo:eventinfo) => {
   //Eventがeventinfo型オブジェクトを複数持ったオブジェクト
   console.log(Event)
   return (
