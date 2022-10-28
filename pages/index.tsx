@@ -20,7 +20,7 @@ const Home:NextPage = () => {
           <Card>
             <Card.Body>
               <Link href="./Events">
-              <Card.Title>
+              <Card.Title style={{textAlign: "center"}}>
                 イベント一覧
               </Card.Title>
               </Link>

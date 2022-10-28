@@ -1,7 +1,6 @@
 import {Row,Col,Card} from 'react-bootstrap'
 import Link  from 'next/link'
 import {Property} from 'csstype';
-import Route from '../route/[route_name]';
 
 type route_obj = {
     color:NonNullable<Property.Color>
