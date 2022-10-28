@@ -13,7 +13,6 @@ const NAVBAR = () => {
                     <Nav className="me-auto">
                         <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/Events">Event</Nav.Link>
-                        <Nav.Link href="/Route">route</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
                 <p>

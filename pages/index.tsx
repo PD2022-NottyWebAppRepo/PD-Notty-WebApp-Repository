@@ -16,13 +16,25 @@ const Home:NextPage = () => {
           <RouteCards/>
           <div style={{padding : "15px"}}/>
   
-          <Row md={2} className='g-2'>
+          <Row md={1}>
           <Card>
             <Card.Body>
               <Link href="./Events">
               <Card.Title style={{textAlign: "center"}}>
                 イベント一覧
               </Card.Title>
+              </Link>
+            </Card.Body>
+          </Card>
+
+          <div style={{padding:"10px"}} />
+          
+          <Card>  
+            <Card.Body>
+              <Link href="./QR">
+                <Card.Title style={{textAlign: "center"}}>
+                  QRコード
+                </Card.Title>
               </Link>
             </Card.Body>
           </Card>
