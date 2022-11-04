@@ -1,5 +1,6 @@
 import { Navbar,Nav,Button } from "react-bootstrap"
 import {useSession,signIn,signOut} from 'next-auth/react'
+import Link from "next/link";
 
 const NAVBAR = () => {
     const {data:session} = useSession();
@@ -8,7 +9,7 @@ const NAVBAR = () => {
         return(
             <Navbar bg="warning" expand="md" color='yellow-400'>
                 <Navbar.Toggle className='me-auto'/>
-                <Navbar.Brand href="#home" className='me-auto'><b>ホーム</b></Navbar.Brand>
+                <Navbar.Brand className='me-auto'><Link href="/"><b>ホーム</b></Link></Navbar.Brand>
                 <Navbar.Collapse>
                     <Nav className="me-auto">
                         <Nav.Link href="/">Home</Nav.Link>

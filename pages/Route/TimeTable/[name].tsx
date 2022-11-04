@@ -1,6 +1,7 @@
 import { useRouter } from "next/router"
 import HEAD from "../../../Component/HEAD";
 import NAVBAR from "../../../Component/Navbar";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const TimeTable = () => {
     const Router = useRouter();
