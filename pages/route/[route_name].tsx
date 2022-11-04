@@ -33,7 +33,7 @@ const Route = () => {
                 <section className="circle-box">
                 {Route_stoplist[Route_Name[String(route_name)]].map((routeName,idx) => (
                     <div className="item" style={{textAlign:"center",padding: "5px"}} key={idx}>
-                        {idx},{route_name}
+                        {idx},{/*Route_stoplist[Route_Name[String(route_name)]][idx]*/routeName}
                     </div>
                 ))}
                 </section>
