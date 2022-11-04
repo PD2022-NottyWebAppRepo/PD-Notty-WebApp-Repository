@@ -20,7 +20,7 @@ const App = (eventinfo:EventInfoType) => {
   return (
     <div>
       <NAVBAR/>
-      {<Row xs={2} md={2} className="g-2">
+      {/*{<Row xs={2} md={2} className="g-2">
         {Object.keys(eventinfo).map((_, idx) => (
         <Col key={idx}>
           <Card>
@@ -32,12 +32,12 @@ const App = (eventinfo:EventInfoType) => {
           </Card>
         </Col>
       ))}
-      </Row>}
+      </Row>*/}
     </div>
   )
 }
 
-export const getStaticProps = async () => {
+/*export const getStaticProps = async () => {
   const data = await client.get({endpoint:"eventinfo"});
 
   return {
@@ -45,7 +45,7 @@ export const getStaticProps = async () => {
       eventinfo: data.contents,
     },
   };
-};
+};*/
 
 export default App
 
