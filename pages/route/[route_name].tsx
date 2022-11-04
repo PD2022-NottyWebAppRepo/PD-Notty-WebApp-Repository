@@ -33,7 +33,9 @@ const Route = () => {
             <section className="main-contents">
                 <section className="circle-box">
                 {Route_stoplist[Route_Name[String(route_name)]].map((_,idx) => (
-                    <div className="item" style={{textAlign:"center",padding: "5px"}}>{idx},{Route_stoplist[Route_Name[String(route_name)]][idx]}</div>
+                    <div className="item" style={{textAlign:"center",padding: "5px"}} key={Route_stoplist[Route_Name[String(route_name)]].length}>
+                        {idx},{Route_stoplist[Route_Name[String(route_name)]][idx]}
+                    </div>
                 ))}
                 </section>
             </section> 
