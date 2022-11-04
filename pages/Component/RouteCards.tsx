@@ -27,7 +27,7 @@ const RouteCards = () =>{
     return (
     <Row xs={2} md={2} className="g-2">
           {Object.keys(route_variation).map((_, idx) => (
-          <Col>
+          <Col key={route_variation.length}>
             <Card>
               {/*<Card.Img variant="top" src="https://thumb.ac-illust.com/6c/6c49457122b22005a8dcacaac54d2c17_t.jpeg" />*/}
               <Card.Body >

@@ -45,6 +45,7 @@ model User {
   mobile         String?
   accounts      Account[]
   sessions      Session[]
+  points        Int
 }
 
 model VerificationToken {
