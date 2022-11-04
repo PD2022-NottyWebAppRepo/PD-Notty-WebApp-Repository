@@ -31,9 +31,9 @@ const Route = () => {
             <h2>{Route_Name[String(route_name)]}ルートはこちらです</h2>
             <section className="main-contents">
                 <section className="circle-box">
-                {Route_stoplist[Route_Name[String(route_name)]].map((_,idx) => (
+                {Route_stoplist[Route_Name[String(route_name)]].map((routeName,idx) => (
                     <div className="item" style={{textAlign:"center",padding: "5px"}} key={idx}>
-                        {idx},{Route_stoplist[Route_Name[String(route_name)]][idx]}
+                        {idx},{route_name}
                     </div>
                 ))}
                 </section>
