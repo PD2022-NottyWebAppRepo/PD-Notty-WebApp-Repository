@@ -1,7 +1,6 @@
 import { useRouter } from "next/router"
 import NAVBAR from "../../Component/Navbar";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import RouteCards from "../../Component/RouteCards";
 import HEAD from "../../Component/HEAD";
 
 //辞書オブジェクト生成
