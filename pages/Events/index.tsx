@@ -22,7 +22,7 @@ const App = (eventinfo:EventInfoType) => {
       <NAVBAR/>
       {<Row xs={2} md={2} className="g-2">
         {Object.keys(eventinfo).map((_, idx) => (
-        <Col>
+        <Col key={eventinfo.id.length}>
           <Card>
             <Card.Body key={eventinfo.id}>
               <Card.Title>
