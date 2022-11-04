@@ -6,6 +6,7 @@ import { NextRequest } from 'next/server';
 const prisma = new PrismaClient()
 
 export const authOptions = {
+  adapter: PrismaAdapter(prisma),
   providers:[
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID || "",
