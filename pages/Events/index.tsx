@@ -1,4 +1,4 @@
-import NAVBAR from '../Component/Navbar';
+import NAVBAR from '../../Component/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col, Card } from 'react-bootstrap';
 import {client} from '../../libs/client'

@@ -2,9 +2,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row,Card,} from "react-bootstrap";
 import Link from 'next/link';
 import type {NextPage} from 'next';
-import NAVBAR from './Component/Navbar';
-import RouteCards from './Component/RouteCards'
-import HEAD from './Component/HEAD';
+import NAVBAR from '../Component/Navbar';
+import RouteCards from '../Component/RouteCards'
+import HEAD from '../Component/HEAD';
 
 const Home:NextPage = () => {
     return (
