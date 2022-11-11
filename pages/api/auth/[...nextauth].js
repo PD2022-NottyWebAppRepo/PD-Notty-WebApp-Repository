@@ -21,6 +21,8 @@ export const authOptions = {
     },
     async jwt({token,account,session}){
       if(account) token.accessToken = account.accessToken;
+      let jsonData = JSON.stringify(session)
+      console.log(jsonData)
       return token;
     }
   }
