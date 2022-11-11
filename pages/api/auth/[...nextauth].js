@@ -23,28 +23,3 @@ export const authOptions = {
 }
 
 export default NextAuth(authOptions)
-
-/*
-export default NextAuth({
-  adapter: PrismaAdapter(prisma),
-  providers: [
-    GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID ?? '',
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? '',
-    }),
-  ],
-  callbacks:{
-    async signIn({user,accountl,profile,email,credentials}){
-      return true;
-    },
-    async jwt({token,user,account,profile,isNewUser}){
-      if(account){
-        token.accessToken = account.access_token;
-        return token;
-      }
-      console.log(`account:${JSON.stringify(account)}`);
-      return token;
-    }
-  },
-  secret: "secret"
-});*/
