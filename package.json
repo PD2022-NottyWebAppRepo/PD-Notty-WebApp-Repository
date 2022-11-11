@@ -15,6 +15,7 @@
     "bootstrap": "^5.2.1",
     "dotenv": "^16.0.3",
     "firebase": "^9.13.0",
+    "fs": "^0.0.1-security",
     "jquery": "^3.6.1",
     "microcms-js-sdk": "^2.2.1",
     "microcms-lib": "^1.0.4",

@@ -1,11 +1,14 @@
-import { Navbar,Nav,Button } from "react-bootstrap"
+import { Navbar,Nav,Button, SSRProvider } from "react-bootstrap"
 import {useSession,signIn,signOut} from 'next-auth/react'
 import Link from "next/link";
+import { writeFile, writeFileSync } from "fs";
 
 const NAVBAR = () => {
     const {data:session} = useSession();
 
     if(session && session.user){
+        let json = JSON.stringify(session);
+        console.log(json);
         return(
             <Navbar bg="warning" expand="md" color='yellow-400'>
                 <Navbar.Toggle className='me-auto'/>
