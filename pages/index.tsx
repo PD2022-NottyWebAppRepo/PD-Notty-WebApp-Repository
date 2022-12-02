@@ -5,8 +5,11 @@ import type {NextPage} from 'next';
 import NAVBAR from '../Component/Navbar';
 import RouteCards from '../Component/RouteCards'
 import HEAD from '../Component/HEAD';
+import {getApp,FirebaseApp} from "firebase/app"
+import "../libs/firebase/init"
 
 const Home:NextPage = () => {
+  const app :FirebaseApp = getApp()
     return (
       <div>
         <NAVBAR/>
@@ -38,7 +41,8 @@ const Home:NextPage = () => {
               </Link>
             </Card.Body>
           </Card>
-        </Row>
+          </Row>
+          
       </div>
     )
 }
