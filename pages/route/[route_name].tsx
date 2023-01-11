@@ -34,7 +34,7 @@ const Route = () => {
                 {Route_stoplist[Route_Name[String(route_name)]].map((routeName,idx) => {
                     return(
                     <div className="item" style={{textAlign:"center",padding: "5px"}} key={idx}>
-                        <Link href={`../Route/TimeTable/${routeName}`}>{String(idx) + "," + routeName}</Link>
+                        <Link href={`../route/TimeTable/${routeName}`}>{String(idx) + "," + routeName}</Link>
                     </div>
                 )
                 })}
