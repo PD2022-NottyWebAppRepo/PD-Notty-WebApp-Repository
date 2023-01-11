@@ -14,8 +14,16 @@ const EventInfo = () => {
             <HEAD/>
             <NAVBAR />
             <h2>{EventName}</h2>
-            <section>
+            <section  style={{display: "flex",alignItems: "center",justifyContent: "center"}}>
+                <div style={{width: "18rem",justifyContent: "center"}}>
+                <h2>期間</h2>
+                <p>2022-10-12~2022-10-12</p>
+                <h2>実施場所</h2>
+                <p>押野公民館</p>
+                <h2>ホームページ</h2>
+                <p style={{color: "red"}}>Link Data NOT FOUND</p>
                 
+                </div>
             </section> 
         </>
     )

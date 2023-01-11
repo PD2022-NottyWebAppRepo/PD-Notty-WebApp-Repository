@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col, Card } from 'react-bootstrap';
 import {client} from '../../libs/client'
 import Link from 'next/link';
+import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from 'react';
 
 const App = ({eventinfo}) => {
 
@@ -18,12 +19,12 @@ const App = ({eventinfo}) => {
     <div>
       <NAVBAR/>
       <Row xs={2} md={2} className="g-2">
-      {eventinfo.map((eventinfo) => {
+      {eventinfo.map((eventinfo: { id: string | any[]; EventName: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined; EventStartDate: string; EventEndDate: string; }) => {
         return(
-            <Col>
+            <Col key={eventinfo.id.length}>
               <Card>
                 <Card.Body>
-                  <Link href={`../Events/${eventinfo.id}`}>
+                  <Link href={`../Events/${eventinfo.EventName}`}>
                     <Card.Title>{eventinfo.EventName}</Card.Title>
                   </Link>
                   <Card.Text>{ReadableDate(eventinfo.EventStartDate)}~{ReadableDate(eventinfo.EventEndDate)}</Card.Text>

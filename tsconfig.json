@@ -28,5 +28,10 @@
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "paths":{
+      "stream":[
+        "./node_modules/stream-browserinfy"
+      ]
+  }
 }
