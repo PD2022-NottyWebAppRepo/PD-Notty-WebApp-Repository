@@ -35,7 +35,7 @@ const RouteCards = () =>{
                 <Card.Text>
                   {route_variation[idx].route_startpoint}~{route_variation[idx].route_endpoint} 
                 </Card.Text>
-                <Link href={`../route/${RouteName_EN[route_variation[idx].route_name]}`}>
+                <Link href={`../Route/${RouteName_EN[route_variation[idx].route_name]}`}>
                   <Card.Text style={{color:'blue'}}>
                     このルートのバス停一覧を見る
                   </Card.Text>

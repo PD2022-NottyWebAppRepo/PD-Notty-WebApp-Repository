@@ -5,7 +5,14 @@ import {client} from '../../libs/client'
 import Link from 'next/link';
 import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from 'react';
 
-const App = ({eventinfo}) => {
+type Info = {
+  id: string , 
+  EventName: string,
+  EventStartDate: string,
+  EventEndDate: string;
+}
+
+const App = (eventinfo:Info[]) => {
 
   const ReadableDate = (Date:string) => {
     const ymd = String(Date).match(/\d{4}-?\d{2}-?\d{2}/);
@@ -14,12 +21,12 @@ const App = ({eventinfo}) => {
     //` ${hms}`
   }
   /* 写真が欲しい　ページネーションが欲しい　カーソル合わせた時の変化が欲しい　左右に余白、イベント情報ごとに余白　境がわかりやすい
-  縦に並べた方がいい*/
+  縦に並べた方がいい 4行化*/
   return (
     <div>
       <NAVBAR/>
       <Row xs={2} md={2} className="g-2">
-      {eventinfo.map((eventinfo: { id: string | any[]; EventName: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined; EventStartDate: string; EventEndDate: string; }) => {
+      {eventinfo.map((eventinfo: Info) => {
         return(
             <Col key={eventinfo.id.length}>
               <Card>
